@@ -5,9 +5,9 @@ import googlesearch
 
 #pyinstaller --onefile test.py
 def Baixar():
-    jogo = googlesearch.lucky('emuparadise.me' + str(nome.get()),tld='me')
+    jogo = googlesearch.lucky('emuparadise.me download' + str(nome.get()),tld='me')
     print(jogo)
-    emuParadise = regex.compile(r'(https://www.emuparadise.me/)' + '([\w-()]+)/' + '([\w-()\[\]]+/)' + '(\d+)')
+    emuParadise = regex.compile(r'(https://www.emuparadise.me/)' + '([\S--/]+)/' + '([\S--/]+/)' + '(\d+)')
     mb = emuParadise.search(str(jogo))
     numero = mb.group(4)
     output = 'https://www.emuparadise.me/roms/get-download.php?gid=' + numero + '&test=true'
